@@ -191,7 +191,7 @@ Guarda. Este parámetro queda disponible en **todos** los pipelines del Data Fac
 
 > **No olvides publicar**: crear el Global Parameter no lo guarda de forma permanente por sí solo — verás el botón **Publish all** arriba con un contador (ej. "1"). Haz clic en **Publish all** y confirma, o el parámetro se perderá si cierras la sesión sin publicar.
 
-<img src="publish_global_parameter.png" alt="Botón Publish all junto al Global Parameter creado" width="300">
+<img src="files/publish_global_parameter.png" alt="Botón Publish all junto al Global Parameter creado" width="300">
 
 > Si el día de mañana cambias de workspace de Databricks (por ejemplo pasas de dev a prod), solo actualizas este único valor y todos los pipelines quedan apuntando al nuevo workspace, sin tocar código.
 
@@ -227,7 +227,7 @@ En ADF Studio: **Manage** (ícono de caja de herramientas) → **Linked services
 
 > Al abrir el panel "New linked service" verás dos pestañas: **Data store** y **Compute**. Azure Databricks aparece únicamente en la pestaña **Compute** (junto a Azure Batch y Azure Data Lake Analytics) — selecciona esa tarjeta con el ícono rojo de capas apiladas.
 
-<img src="new_linked_service_databricks.png" alt="Panel New linked service, pestaña Compute, con Azure Databricks señalado" width="300">
+<img src="files/new_linked_service_databricks.png" alt="Panel New linked service, pestaña Compute, con Azure Databricks señalado" width="300">
 
 | Campo | Valor |
 |---|---|
@@ -310,7 +310,7 @@ Databricks permite tener dos Jobs con el mismo nombre (por ejemplo si se clona u
 
 1. Dentro del Job (no dentro de una tarea — asegúrate de estar en la vista general del Job), busca el panel de detalles a la derecha, o el ícono de lápiz ✏️ junto al nombre del Job / sección **"Job details"**. También se puede acceder directo desde el listado de **Jobs & Pipelines**, haciendo clic en el ícono de lápiz ✏️ de la fila correspondiente:
 
-<img src="edit_job_pencil_icon.png" alt="Ícono de lápiz para editar el Job desde el listado de Jobs & Pipelines" width="300">
+<img src="files/edit_job_pencil_icon.png" alt="Ícono de lápiz para editar el Job desde el listado de Jobs & Pipelines" width="300">
 
 2. Busca la sección **Tags** → **+ Add**.
 3. Agrega dos filas (**Key y Value siempre en mayúscula**):
@@ -322,7 +322,7 @@ Databricks permite tener dos Jobs con el mismo nombre (por ejemplo si se clona u
 
 4. Guarda.
 
-<img src="tags_capa_estado.png" alt="Tags CAPA: BRONCE y ESTADO: ACTIVO en el Job" width="300">
+<img src="files/tags_capa_estado.png" alt="Tags CAPA: BRONCE y ESTADO: ACTIVO en el Job" width="300">
 
 > **Valores posibles de `CAPA`**: `LANDING`, `RAW`, `BRONCE` (según en qué etapa del pipeline de datos participe ese Job). Para `WF_TEST_HOLA_MUNDO` se usa `BRONCE`.
 > **Valor de `ESTADO`**: siempre `ACTIVO` para el Job que realmente debe ejecutarse. Para probar qué pasa cuando la validación falla, se puede dejar un Job duplicado con el mismo nombre pero con `ESTADO = INACTIVO` (o sin el tag) — la validación del Pipeline 2 (paso 11) debe rechazarlo aunque la API devuelva ese Job en vez del correcto.
@@ -368,7 +368,7 @@ En ADF Studio: **Author** → **Pipelines** → **New pipeline**. Nómbralo `pl_
 
 **Publica el pipeline** (botón **Publish all**, arriba a la izquierda).
 
-<img src="publish_global_parameter.png" alt="Botón Publish all" width="300">
+<img src="files/publish_global_parameter.png" alt="Botón Publish all" width="300">
 
 ---
 
